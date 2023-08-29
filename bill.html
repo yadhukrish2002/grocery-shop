@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="bll.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    </head>
+<body>  
+<div class="container">
+     
+    <div class="row pad-top-botm ">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+                <h2>ONLINE STORE</h2>
+       </div>
+   </div>
+   <div class="row text-center contact-info">
+       <div class="col-lg-12 col-md-12 col-sm-12">
+           <hr>
+           <span>
+               <strong>Email : </strong>  onlinestore@gmail.com
+           </span>
+           <span>
+               <strong>Call : </strong>  +91-9995984912 
+           </span>
+           <hr>
+       </div>
+   </div>
+   <div class="row pad-top-botm client-info">
+       <div class="col-lg-6 col-md-6 col-sm-6">
+       <h4>  <strong>Client Information</strong></h4>
+         <strong> Classy Client</strong>
+           <b>E-mail :</b><span id="displaydata"></span>
+       </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          
+             <h4>  <strong>Payment Details </strong></h4>
+          <b>Bill Amount : ₹ 150/- </b>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="BillDateDisplay"></div>
+            <br>
+            <div id="DellDateDisplay"></div>
+       </div>
+   </div>
+   <div class="row">
+       <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="table-responsive">
+                              <table class="table table-striped table-bordered table-hover">
+                          <thead>
+                              <tr>
+                                  <th>ITEM</th>
+                                  <th>Quantity.</th>
+                                  <th>Unit Price</th>
+                                   <th>Sub Total</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>Dry Fruits</td>
+                                  <td>1</td>
+                                  <td>₹150.00</td>
+                                  <td>₹150.00</td>
+                              </tr>
+                              
+                              
+                          </tbody>
+                      </table>
+             </div>
+           <hr>
+           <div class="ttl-amts">
+             <h5>  Total Amount : ₹150.00 </h5>
+           </div>
+           <hr>
+            <div class="ttl-amts">
+                <h5>  Tax : ₹10.00 ( by 10 % on bill ) </h5>
+           </div>
+           <hr>
+            <div class="ttl-amts">
+                <h4> <strong>Bill Amount : ₹160.00</strong> </h4>
+           </div>
+       </div>
+   </div>
+    <div class="row">
+       <div class="col-lg-12 col-md-12 col-sm-12">
+          <strong> Important: </strong>
+           <ol>
+                <li>
+                  This is an electronic generated invoice so doesn't require any signature.
+
+               </li>
+               <li>
+                   Please read all terms and polices on  www.palavaka.com for returns, replacement and other issues.
+
+               </li>
+           </ol>
+           </div>
+       </div>
+    <div class="row pad-top-botm">
+       <div class="col-lg-12 col-md-12 col-sm-12">
+           <hr>
+         <a href="files/bill.pdf" download=> <button style="background-color: rgb(53, 189, 53);color: aliceblue;">Download Bill</button></a>
+           </div>
+       </div>
+</div>
+
+
+<script>
+function updateDateTime() {
+    var BillDateDisplay = document.getElementById('BillDateDisplay');
+    var DellDateDisplay = document.getElementById('DellDateDisplay');
+    var currentDate = new Date();
+    var futureDate = new Date(currentDate);
+    futureDate.setDate(currentDate.getDate() + 2);
+    var options = { year: 'numeric', month: 'long', day: 'numeric'};
+    var formattedBillDate = currentDate.toLocaleDateString(undefined, options);
+    var formattedDellDate = currentDate.toLocaleDateString(undefined, options);
+    BillDateDisplay.textContent = "Bill  Date : " + formattedBillDate;
+    DellDateDisplay.textContent = "Delivary Date : "+formattedDellDate;
+}
+
+// Call the function immediately and set an interval to update every second
+updateDateTime();
+</script>
+
+</body>  
+</html>

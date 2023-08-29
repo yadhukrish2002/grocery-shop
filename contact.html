@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      .row {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
+  }
+  .col-2 {
+  padding: 10PX 10PX 10PX 10PX;
+	flex-basis: 50%;
+	width: 600px;
+  color: white;
+  }
+  textarea {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 45px;
+  font-size: 18px;
+  background: none;
+  color: #e1d9ec;
+  border-radius: 5px;
+  border: 1px solid #e1d9ec;
+  border-bottom-width: 2px;
+  transition: all 0.2s ease;
+  }
+  button{
+  height: 50px;
+  width: 50%;
+  margin-top: 30px;
+  color: #fff;
+  padding: 0;
+  border: none;
+  background:none;
+  cursor: pointer;
+  border: 2px solid #e1d9ec;
+  transition: all 0.3s ease;
+  }
+  button:hover{
+    background: #2a564a;
+  }
+    </style>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+        <div class="wrapper" style="width: 700px;">
+          <div class="row">
+            <div class="col-2">
+              <h2>Contact Information</h2>
+              <p>If you have any questions or inquiries, feel free to get in touch with us:</p>
+              <address>
+                Email: <a href="mailto:yadhukrish2002@gmail.com">yadhukrish2002@gmail.com</a><br>
+                Phone: <a href="tel:+919995984912">9995984912</a><br>
+                Address: thurakkal manjeri <br>narukara(po) ,kottupatta<br>malappuram, kerala
+              </address>
+            </div>
+          <div class="col-2">
+            <h2>Contact Form</h2>
+            <form action="submit_form.php" method="post">
+            <table>
+              <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" id="name" name="name" required><br></td>
+              </tr>
+              <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" required><br></td>
+              </tr>
+              <tr>
+                <td><label for="message">Message:</label></td>
+                <td><textarea id="message" name="message" rows="4" required></textarea><br></td>
+              </tr>
+              <tr>
+                <td colspan="2"><button type="submit" onclick="sended()">Submit</button></td>
+              </tr>
+            </table>
+          </form>
+          </div>
+      </div>
+      <script>
+        function sended()
+        {
+          alert("your message is sended")
+        }
+      </script>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
